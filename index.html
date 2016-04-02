@@ -1,0 +1,81 @@
+<html>
+<head>
+	<title>Assignment 3</title>
+    <link rel="icon" href="static/css/img/assignment3.jpg" />
+	<script type="text/javascript" src="static/js/jquery-1.9.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="static/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/assignment3.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/images.css" />
+</head>
+<body>
+	<div id="menu">
+        <h2><a href="index.html">Assignment 3</a></h2>
+        <span class="menuImg"></span>		
+        <ul>
+			<li>
+				<div class="title"><span class="countryImg"></span>Country</div>	
+				<ul>
+					<li><a href="country/create.html">Create New Country</a></li>
+					<li><a href="country/search.html">Search</a></li>
+					<li><a href="country/countries.html">List Of Countries</a></li>
+				</ul>
+			</li>
+			<li>
+				<div class="title"><span class="staffImg"></span>Staff</div>	
+				<ul>
+					<li><a href="staff/create.html">Create new Staff</a></li>
+					<li><a href="staff/search.html">Search</a></li>
+					<li><a href="staff/staffs.html">List Of Staffs</a></li>
+				</ul>
+			</li>		
+			<li>
+				<div class="title"><span class="customerImg"></span>Customer</div>	
+				<ul>
+					<li><a href="customer/create.html">Create new Customer</a></li>
+					<li><a href="customer/search.html">Search</a></li>
+					<li><a href="customer/customers.html">List Of Customer</a></li>
+				</ul>
+			</li>		
+			<li>
+				<div class="title"><span class="categoryImg"></span>Category</div>	
+				<ul>
+					<li><a href="category/create.html">Create new category</a></li>
+					<li><a href="category/search.html">Search</a></li>
+					<li><a href="category/categories.html">List Of categories</a></li>
+				</ul>
+			</li>
+			<li>
+				<div class="title"><span class="actorImg"></span>Actor</div>	
+				<ul>
+					<li><a href="actor/create.html">Create new actor</a></li>
+					<li><a href="actor/search.html">Search</a></li>
+					<li><a href="actor/actors.html">List Of actors</a></li>
+				</ul>
+			</li>		
+			<li>
+				<div class="title"><span class="firmImg"></span>Firm</div>	
+				<ul>
+					<li><a href="firm/create.html">Create new firms</a></li>
+					<li><a href="firm/search.html">Search</a></li>
+					<li><a href="firm/firms.html">List Of firms</a></li>
+				</ul>
+			</li>		
+		</ul>
+        <div id="aboutus">
+            <h2>Nguyễn Bá Nhật Quang</h2>
+            <h2>SE90114</h2>
+        </div>
+	</div>
+</body>
+<script type="text/javascript">
+	$(document).ready(function(){
+		
+		$('.title').click(function() {
+			$('#menu ul ul').slideUp();
+			if (!$(this).next().is(':visible')) {
+				$(this).next().slideDown();	
+			}
+		});
+	})
+</script>
+</html>
