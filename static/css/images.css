@@ -1,0 +1,98 @@
+
+/**********************************
+
+Images settings
+
+***********************************/
+
+.country {
+	background: url('img/country.png') no-repeat center;
+	padding: 17px;
+	background-size: 20px;
+}
+
+.task {
+	background: url('img/task.png') no-repeat center;
+	padding: 17px;
+	background-size: 20px;
+}
+
+.calendar {
+	background: url('img/calendar.png') no-repeat center;
+	padding: 17px;
+	background-size: 20px;
+}
+
+.heart {
+	background: url('img/heart.png') no-repeat center;
+	padding: 17px;
+	background-size: 20px;	
+}
+
+.displayFull {
+	background: url('img/button.png') no-repeat center;	
+	padding: 17px;
+	background-size: 20px;	
+}
+
+.update {
+	background: url('img/update.png') no-repeat center;	
+	padding: 17px;
+	background-size: 20px;	
+}
+
+.delete {
+	background: url('img/delete.png') no-repeat center;	
+	padding: 17px;
+	background-size: 20px;	
+}
+
+.countryImg {
+	background: url('img/country.png') no-repeat center;	
+	padding: 17px;
+	background-size: 20px;	
+    
+}
+
+.staffImg {
+	background: url('img/staff.png') no-repeat center;	
+	padding: 17px;
+	background-size: 20px;	
+    
+}
+
+.customerImg {
+	background: url('img/customer.png') no-repeat center;	
+	padding: 17px;
+	background-size: 20px;	
+    
+}
+
+.categoryImg {
+	background: url('img/category.png') no-repeat center;	
+	padding: 17px;
+	background-size: 20px;	
+    
+}
+
+.actorImg {
+	background: url('img/actor.png') no-repeat center;	
+	padding: 17px;
+	background-size: 20px;	
+    
+}
+
+.firmImg {
+	background: url('img/firm.png') no-repeat center;	
+	padding: 17px;
+	background-size: 20px;	
+    
+}
+
+.menuImg {
+    background: url('img/category.png') no-repeat center;
+    padding: 60px;
+    background-size: 100px;
+    position: absolute;
+    margin: 25px 0px 0px 30px;
+}

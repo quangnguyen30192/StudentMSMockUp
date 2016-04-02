@@ -1,0 +1,178 @@
+<html>
+<head>
+	<title>Create Staff</title>
+    <link rel="icon" href="../static/css/img/assignment3.jpg" />
+	<script type="text/javascript" src="../static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../static/js/jquery.validate.min.js"></script>
+   	<script type="text/javascript" src="../static/js/jquery.ui.core.js"></script>
+	<script type="text/javascript" src="../static/js/jquery.ui.widget.js"></script>
+	<script type="text/javascript" src="../static/js/jquery.ui.datepicker.js"></script>
+	<link rel="stylesheet" type="text/css" href="../static/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/assignment3.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/images.css" />
+    <link rel="stylesheet" href="../static/css/jquery.ui.all.css" />
+</head>
+<body>
+	<div id="menu">
+        <h2><a href="../index.html">Assignment 3</a></h2>
+        <span class="menuImg"></span>		
+        <ul>
+			<li>
+				<div class="title"><span class="countryImg"></span>Country</div>	
+				<ul>
+					<li><a href="../country/create.html">Create New Country</a></li>
+					<li><a href="../country/search.html">Search</a></li>
+					<li><a href="../country/countries.html">List Of Countries</a></li>
+				</ul>
+			</li>
+			<li>
+				<div class="title"><span class="staffImg"></span>Staff</div>	
+				<ul id="opening">
+					<li><a href="create.html">Create New Staff</a></li>
+					<li><a href="search.html">Search</a></li>
+					<li><a href="staffs.html">List Of Staffs</a></li>
+				</ul>
+			</li>		
+			<li>
+				<div class="title"><span class="customerImg"></span>Customer</div>	
+				<ul>
+					<li><a href="../customer/create.html">Create New Customer</a></li>
+					<li><a href="../customer/search.html">Search</a></li>
+					<li><a href="../customer/customers.html">List Of Customers</a></li>
+				</ul>
+			</li>		
+			<li>
+				<div class="title"><span class="categoryImg"></span>Category</div>	
+				<ul>
+					<li><a href="../category/create.html">Create new category</a></li>
+					<li><a href="../category/search.html">Search</a></li>
+					<li><a href="../category/categories.html">List Of categories</a></li>
+				</ul>
+			</li>
+			<li>
+				<div class="title"><span class="actorImg"></span>Actor</div>	
+				<ul>
+					<li><a href="../actor/create.html">Create new actor</a></li>
+					<li><a href="../actor/search.html">Search</a></li>
+					<li><a href="../actor/actors.html">List Of actors</a></li>
+				</ul>
+			</li>		
+			<li>
+				<div class="title"><span class="firmImg"></span>Firm</div>	
+				<ul>
+					<li><a href="../firm/create.html">Create new firm</a></li>
+					<li><a href="../firm/search.html">Search</a></li>
+					<li><a href="../firm/firms.html">List Of firms</a></li>
+				</ul>
+			</li>		
+		</ul>
+        <div id="aboutus">
+            <h2>Nguyễn Bá Nhật Quang</h2>
+            <h2>SE90114</h2>
+        </div>
+	</div>
+    <div id="content">
+        <h1>Create New Staff</h1>
+                
+        <form action="createSuccess.html" method="POST" id="form">
+            <h2 class="success"> New Staff is created successfully</h2>
+            <table>
+                <h2 class="success"> New Staff is created successfully</h2>
+                <tr>
+                    <td><h2>Staff ID: </h2></td>
+                    <td><input type="text" name="staffID" class="required"/></td>
+                </tr>
+                <tr>
+                    <td><h2>Name: </h2></td>
+                    <td><input type="text" name="name" class="required"/></td>
+                </tr>
+                <tr>
+                    <td><h2>Email: </h2></td>
+                    <td><input type="text" name="email" class="required"/></td>
+                </tr>
+                <tr>
+                    <td><h2>AddressID: </h2></td>
+                    <td>
+                        <select>
+                            <option value="c01">C01</option>
+                            <option value="c02">C02</option>
+                            <option value="c03">C03</option>
+                            <option value="c04">C04</option>
+                            <option value="c05">C05</option>
+                            <option value="c06">C06</option>
+                            <option value="c07">C07</option>
+                            <option value="c08">C08</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><h2>Active: </h2></td>
+                    <td>
+                            <h2><input type="radio" name="active" value="yes" />Yes
+                            <input type="radio" name="active" value="no" />No</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td><h2>UserName: </h2></td>
+                    <td><input type="text" name="username" class="required"/></td>
+                </tr>
+                <tr>
+                    <td><h2>Password: </h2></td>
+                    <td><input type="password" name="password" class="required"/></td>
+                </tr>
+                    
+                <tr>
+                    <td><h2>Last Update: </h2></td>
+                    <td><input type="text" name="date" id="date"/></td>
+                </tr>
+
+            </table>
+            <div class="btns">
+                <input type="reset" value="Clear"/>
+                <input type="submit" value="Create" class="btsubmit" />
+            </div>
+        </form>         
+    </div>
+    
+</body>
+<script type="text/javascript">
+	$(document).ready(function(){
+        $('#date').datepicker();
+       
+		$('.title').click(function() {
+			$('#menu ul ul').slideUp();
+			if (!$(this).next().is(':visible')) {
+				$(this).next().slideDown();	
+			}
+		});
+        
+        
+        $('#menu ul #opening').show();
+        
+        $('#form').validate({
+            rules: {
+                staffID: {
+                    minlength : 3
+                },
+                
+                name: {
+                    minlength : 5
+                },
+                email: {
+                    required: true,
+                    email: true  
+                },
+                date: {
+                    minlength : 7,
+                    required: true,
+                    date: true
+                }
+            },
+            submitHandler: function(form){
+                form.submit();
+            }
+        });
+        
+	})
+</script>
+</html>
